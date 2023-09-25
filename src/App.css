@@ -1,6 +1,18 @@
 /* this is what I added from original version not done using React */
 * {
   background-color: black;
+  color: white;
+}
+
+.header {
+  /* width: 100vw; */
+  height: 100vh;
+  /* max-width: 1250px; */
+  /* margin: 0;
+  padding: 0; */
+  /* min-height: 100%;
+  position: relative; */
+  /* max-width: 110%; */
 }
 
 h1 {
@@ -36,6 +48,27 @@ nav a {
   text-align: center;
 }
 
+.navlink3 {
+  /* display: inline;
+  position: relative; */
+  text-align: left;
+  color: red;
+}
+
+.navlink4 {
+  /* display: inline;
+  position: relative; */
+  text-align: left;
+  color: yellow;
+}
+
+.navlink5 {
+  /* display: inline;
+  position: relative; */
+  text-align: left;
+  color: blue;
+}
+
 .dot {
   height: 25px;
   width: 25px;
@@ -45,14 +78,17 @@ nav a {
 
 #red {
   background-color: red;
+  margin-left: 10px;
 }
 
 #yellow {
   background-color: yellow;
+  margin-left: 10px;
 }
 
 #blue {
   background-color: mediumblue;
+  margin-left: 10px;
 }
 
 .card {
@@ -69,12 +105,12 @@ nav a {
   padding: 5px;
 }
 /* below is what came when react was installed */
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
+} */
 
 .logo {
   height: 6em;
@@ -110,4 +146,125 @@ nav a {
 
 .read-the-docs {
   color: #888;
+}
+
+/* modal styles from MinneGrowta*/
+/* Style the modal content */
+.ReactModal__Content {
+  /* background-color: #fff; */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  position: relative;
+  z-index: 1001;
+  top: 20%;
+}
+
+/* Style the modal close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  /* color: #333; */
+}
+
+.close-button:hover {
+  color: white;
+}
+
+/* footer styles */
+.footer {
+  margin-top: auto;
+  /* background-color: #1d1d1d; */
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  /* background-color: #85ae5a !important; */
+}
+
+.container-fluid {
+  padding: 0;
+  /* background-color: "#F2EFE0" !important; */
+}
+
+.quote-container p {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.footer-content {
+  display: flex;
+  position: relative;
+  bottom: 0%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-content .nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.footer-content a {
+  /* color: rgba(0, 0, 0, 0.18); */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.footer-content a:hover {
+  color: yellow;
+}
+
+.footer-info {
+  font-size: 12px;
+}
+
+.card-container {
+  display: flex;
+}
+
+.card {
+  width: 400px;
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  margin-right: 10px;
+
+  margin-bottom: 10px;
+}
+
+.faded-text {
+  /* color: rgba(0, 0, 0, 0.18); */
+  font-weight: bold;
+}
+
+.footer .footer-content {
+  /* background-color: #85ae5a !important; */
+  flex-grow: 1;
+}
+
+@media (max-width: 574px) {
+  .footer-content .nav {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 422px) {
+  .footer-content .nav {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 336px) {
+  .footer-content .nav {
+    gap: 0px;
+  }
 }

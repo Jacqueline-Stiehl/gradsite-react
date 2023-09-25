@@ -1,4 +1,26 @@
-:root {
+.ReactModal__Overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+.ReactModal__Content {
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 80%;
+  padding: 20px;
+  position: relative;
+  top: 20%;
+  z-index: 1001;
+}
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +88,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

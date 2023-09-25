@@ -1,6 +1,6 @@
 import '../App.css'
 
-import { Button } from "@chakra-ui/react";
+// import { Button } from "@chakra-ui/react";
 
 const Home = () => {
 
