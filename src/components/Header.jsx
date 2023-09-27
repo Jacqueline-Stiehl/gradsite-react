@@ -8,35 +8,31 @@ function Header () {
   
     return (
       <header className="header">
-              <h1>
-                <span className="dot" id="red"></span> THE 
-                <span className="dot" id="yellow"></span> ONE 
-                <span className="dot" id="blue"></span> WHERE 
-                <span className="dot" id="red"></span> DANIKA 
-                <span className="dot" id="yellow"></span> GRADUATES 
-                <span className="dot" id="yellow"></span>
-              </h1>
-                <br/>
-               <h1>
-                <span className="dot" id="red"></span> CLASS
-                <span className="dot" id="yellow"></span> OF
-                <span className="dot" id="blue"></span> 2024
-                <span className="dot" id="red"></span>
-               </h1>   
+        <h1>
+          <span className="dot" id="red"></span> THE 
+          <span className="dot" id="yellow"></span> ONE 
+          <span className="dot" id="blue"></span> WHERE 
+          <span className="dot" id="red"></span> DANIKA 
+          <span className="dot" id="yellow"></span> GRADUATES 
+          <span className="dot" id="yellow"></span>
+        </h1>
+        {/* <br/> */}
+        <h1>
+          <span className="dot" id="red"></span> CLASS
+          <span className="dot" id="yellow"></span> OF
+          <span className="dot" id="blue"></span> 2024
+          <span className="dot" id="red"></span>
+        </h1>   
 
-               <Navbar bg="dark" variant="dark" expand="sm">
-        <Container fluid>
-
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-            </Nav>
-
+        <Navbar bg="dark" variant="dark" expand="sm">
+          <Container fluid>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+               <Nav className="me-auto">
+               </Nav>
             {/* Right-side Nav Options */}
-            <Nav>
-              
+               <Nav>
                 <>
-                  
                   {currentPath !== "/schoolPics" && (
                     <Nav.Link href="/schoolPics" className="navlink3">School Pictures</Nav.Link>
                   )}
@@ -46,13 +42,14 @@ function Header () {
                   {currentPath !== "/SeniorPics" && (
                     <Nav.Link href="/SeniorPics" className="navlink5">Senior Pictures</Nav.Link>
                   )}
+                  {currentPath !== "/Messages" && (
+                    <Nav.Link href="/Messages" className="navlink5">Messages</Nav.Link>
+                  )}
                 </>
-              
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
+               </Nav>
+              </Navbar.Collapse>
+           </Container>
+        </Navbar>
       </header>
     );
   };

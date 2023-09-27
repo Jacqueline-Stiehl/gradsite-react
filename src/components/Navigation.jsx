@@ -13,11 +13,11 @@ export default function Navigation(props) {
   },
     heading: {
         background: "black",
-        minHeight: 50,
-        lineHeight: 3.5,
+        // minHeight: 50,
+        // lineHeight: 3.5,
         fontSize: "25px",
         color: "white",
-        padding: "20px",
+        // padding: "20px",
     },
 }
 
@@ -39,6 +39,9 @@ useEffect(() => {
         </Nav.Item>
         <Nav.Item>
           <Nav.Link onClick={() => props.handlePageChange('SchoolPics')} style={style.heading} href="#" eventKey="link-3">SchoolPics</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link onClick={() => props.handlePageChange('SeniorPics')} style={style.heading} href="#" eventKey="link-4">SeniorPics</Nav.Link>
         </Nav.Item>
       </Nav>
     </>
