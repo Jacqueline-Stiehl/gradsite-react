@@ -1,4 +1,4 @@
-import '../App.css'
+// import '../App.css'
 
 // import { Button } from "@chakra-ui/react";
 
@@ -7,10 +7,11 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-header">
-        <h1 className="header-text" style={{ position: "fixed" }}>
-          {/* Planting success <br/>
-          in the land of 10,000 lakes */}
+        {/* <h1 className="header-text" style={{ position: "fixed" }}> */}
+        <h1>
+         Welcome to Danika's Grad Site
           </h1>
+          <h2 className="home-text">Click the links above to move around the site, see Danika's school and graduation pictures, learn about her favorite things over the year, and leave her a message.</h2>
       </div>
       {/* <div className="img-container"> */}
         {/* <div

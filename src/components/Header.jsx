@@ -33,17 +33,20 @@ function Header () {
             {/* Right-side Nav Options */}
                <Nav>
                 <>
+                {currentPath !== "/home" && (
+                    <Nav.Link href="/home" className="navlink2">Home</Nav.Link>
+                  )}
                   {currentPath !== "/schoolPics" && (
                     <Nav.Link href="/schoolPics" className="navlink3">School Pictures</Nav.Link>
-                  )}
-                  {currentPath !== "/favorites" && (
-                    <Nav.Link href="/favorites" className="navlink4" style={{ whiteSpace: "nowrap" }}>Favorites</Nav.Link>
                   )}
                   {currentPath !== "/SeniorPics" && (
                     <Nav.Link href="/SeniorPics" className="navlink5">Senior Pictures</Nav.Link>
                   )}
+                  {currentPath !== "/favorites" && (
+                    <Nav.Link href="/favorites" className="navlink4" style={{ whiteSpace: "nowrap" }}>Favorites</Nav.Link>
+                  )}
                   {currentPath !== "/Messages" && (
-                    <Nav.Link href="/Messages" className="navlink5">Messages</Nav.Link>
+                    <Nav.Link href="/Messages" className="navlink3">Messages</Nav.Link>
                   )}
                 </>
                </Nav>

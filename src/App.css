@@ -31,6 +31,15 @@ h2 {
   padding: 5px;
 }
 
+.home-text {
+  text-align: center;
+  margin: 30px;
+  padding-bottom: 60px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: blue;
+}
+
 nav {
   /* display: flex;
     text-align: center;
