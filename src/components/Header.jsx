@@ -14,7 +14,7 @@ function Header () {
           <span className="dot" id="blue"></span> WHERE 
           <span className="dot" id="red"></span> DANIKA 
           <span className="dot" id="yellow"></span> GRADUATES 
-          <span className="dot" id="yellow"></span>
+          <span className="dot" id="blue"></span>
         </h1>
         {/* <br/> */}
         <h1>

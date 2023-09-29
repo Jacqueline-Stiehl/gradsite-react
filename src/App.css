@@ -31,13 +31,37 @@ h2 {
   padding: 5px;
 }
 
-.home-text {
+/* .home-text {
   text-align: center;
   margin: 30px;
   padding-bottom: 60px;
   padding-left: 25px;
   padding-right: 25px;
   color: blue;
+} */
+
+/* home styles */
+
+.home-container {
+  margin-bottom: 0px;
+}
+
+.home-header h1 {
+  color: blue;
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0); */
+  font-size: 30px !important;
+  /* font-family: 'Cantora One', sans-serif; */
+}
+
+.home-header .header-text {
+  margin-top: -100px;
+  margin-left: -50px;
+}
+
+.header-text {
+  position: absolute;
+  left: 10%;
+  top: 230px;
 }
 
 nav {
