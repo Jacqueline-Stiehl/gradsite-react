@@ -21,6 +21,7 @@ export default function SchoolPics() {
     src="../src/assets/images/favpics/Danika-first-day-of-Kindergarten.jpg"
       alt='Danika in kindergarten'
       borderRadius='lg'
+      minHeight="610px"
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md'>Kindergarten</Heading>
@@ -116,6 +117,7 @@ export default function SchoolPics() {
     src="../src/assets/images/favpics/Danika-first-day-of-5th-grade.jpg"
       alt='Danika in 5th grade'
       borderRadius='lg'
+      minHeight="615px"
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md'>Grade 5</Heading>
@@ -132,9 +134,10 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-6th-grade.jpg"
+    src="../src/assets/images/favpics/Danika-first-day-of-6th-grade-cropped.jpg"
       alt='Danika in 6th grade'
       borderRadius='lg'
+      minHeight="615px"
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md'>Grade 6</Heading>
@@ -153,6 +156,7 @@ export default function SchoolPics() {
     src="../src/assets/images/favpics/Danika-first-day-of-7th-grade.jpg"
       alt='Danika in 7th grade'
       borderRadius='lg'
+      minHeight="615px"
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md'>Grade 7</Heading>
@@ -234,6 +238,25 @@ export default function SchoolPics() {
       <Heading size='md'>Grade 11</Heading>
       <Text>
         This is Danika in eleventh grade.
+      </Text>
+      <Text color='blue.600' fontSize='2xl'>
+        Danika Grace
+      </Text>
+    </Stack>
+  </CardBody>
+</Card>
+
+<Card maxW='md'>
+  <CardBody>
+    <Image
+    src="../src/assets/images/favpics/Danika-first-day-of-12th-grade.png"
+      alt='Danika in 11th grade'
+      borderRadius='lg'
+    />
+    <Stack mt='6' spacing='3'>
+      <Heading size='md'>Grade 12</Heading>
+      <Text>
+        This is Danika in twelfth grade.
       </Text>
       <Text color='blue.600' fontSize='2xl'>
         Danika Grace
