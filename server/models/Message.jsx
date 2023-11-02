@@ -13,16 +13,16 @@ const messageSchema = new Schema (
       type: String,
       required: true
     },
-    userId: {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-    },
-    commentId: [
-      {
-      type: Schema.Types.ObjectId,
-      ref: "Comment",
-    }
-    ],
+    // userId: {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "User",
+    // },
+    // commentId: [
+    //   {
+    //   type: Schema.Types.ObjectId,
+    //   ref: "Comment",
+    // }
+    // ],
     // dateCreated: {
     //   type: Date,
     //   default: Date.now

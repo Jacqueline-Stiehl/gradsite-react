@@ -2,46 +2,47 @@
 
 // react imports
 import React, { useState, useEffect } from 'react';
-import Upload from '../components/Uploader';
-import {useUserContext} from "../ctx/UserContext";
+// import Upload from '../components/Uploader';
+// import {useUserContext} from "../ctx/UserContext";
 
 // Chackra imports
 import {Grid, GridItem, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Box, Button,  Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure,FormControl, FormLabel, Input, Textarea, Text} from '@chakra-ui/react'
 
 export default function Messages () {
-  const { currUser } = useUserContext();
-  const id = currUser?.data?._id;
-  const [comment, setComment] = useState('');
-  const isUserVerified = !!id;
+  // const { currUser } = useUserContext();
+  // const id = currUser?.data?._id;
+  // const [comment, setComment] = useState('');
+  // const isUserVerified = !!id;
   const [results, setResults] = useState([]);
   const [ image, setImage] = useState('')
   const [expandedItem, setExpandedItem] = useState(null);
-  const [currentUser, setCurrentUser] = useState(null);
+  // const [currentUser, setCurrentUser] = useState(null);
   const [form, setForm] = useState({title: "", content: ""});
   const [ messagePosts, setMessagePosts ] = useState([]);
   const  [ okToRender, setOkToRender ] = useState(false)
   const [deletePost, setdeletePost] = useState([]);
-   // code for getting all forum posts, useState used and fetch request from api used to bring all forum posts from api and turned into array of objects we can map over and display on page
-  const searchForum = async () => {
-    const response = await fetch("/api/forum");
+   // code for getting all message posts, useState used and fetch request from api used to bring all message posts from api and turned into array of objects we can map over and display on page
+  const searchMessage = async () => {
+    const response = await fetch("/api/message");
     const data = await response.json()
     setResults(data.payload);
     // console.log(data.payload)
   }
 
   useEffect(() => {
-    searchForum();
+    searchMessage();
   }, []);
 
 
 
-  // code for displaying my forum posts,
+  // code for displaying my message posts,
 
-  const myMessagePosts = async (userId) => {
+  // const myMessagePosts = async (userId) => {
+    const myMessagePosts = async () => {
     try {
-      const response1 = await fetch(`/api/user/${userId}`);
-      const forumPostsData = await response1.json()
-      setMessagePosts(forumPostsData.payload.myMessages)
+      const response1 = await fetch(`/api/`);
+      const messagePostsData = await response1.json()
+      setMessagePosts(messagePostsData.payload.myMessages)
       setOkToRender(true);
     } catch (error) {
       console.error('error fetching message posts', error);
@@ -49,25 +50,25 @@ export default function Messages () {
   };
   useEffect(() => {
     if( currUser?.data?._id )
-      myForumPosts(currUser?.data?._id) 
+      myMessagePosts(currUser?.data?._id) 
   }, [currUser]);
 
-  //code for modals, one for forum post one for reply, this makes the two buttons open different models
+  //code for modals, one for message post one for reply, this makes the two buttons open different models
   const { isOpen: isMessageOpen , onOpen: onMessageOpen, onClose: onMessageClose } = useDisclosure()
   const { isOpen: isReplyOpen , onOpen: onReplyOpen, onClose: onReplyClose } = useDisclosure()
 
 
-  // monitors what is being typed in new forum post form
+  // monitors what is being typed in new message post form
   let handleInputChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value})
   }
 
 
-  // code for submitting new forum post, text from modal input fields is turned into object and posted to api/forum with the rest of the forum posts. Has to be stringified
+  // code for submitting new message post, text from modal input fields is turned into object and posted to api/message with the rest of the message posts. Has to be stringified
   const [value, setValue] = React.useState('')
   const onSubmit = async () => {
     try {
-      let response = await fetch('/api/forum', {
+      let response = await fetch('/api/message', {
         method: "POST",
         headers: {"content-type": "application/json"},
         body: JSON.stringify( {title: form.title, content: form.content, image: image, userId: id} )
@@ -81,7 +82,7 @@ export default function Messages () {
 
   
   // monitors what is being typed in reply modal form
-  const [reply, setReply] = useState({text: "", forumId: ""});
+  const [reply, setReply] = useState({text: "", messageId: ""});
   let handleReplyInputChange = (e) => {
       setReply({...reply, [e.target.name]: e.target.value})
     }
@@ -90,47 +91,47 @@ export default function Messages () {
   // handles accordian functionality
   let handleAccordianClickChange = (e) => {
     // console.log(e.target.id)
-    setReply({...reply, forumId: e.target.id})
+    setReply({...reply, messageId: e.target.id})
   }
 
 
-  // code for post reply to forum post
-  const onReply = async () => {
-    try {
-      let response = await fetch(`/api/comment/${reply.forumId}`, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({text: reply.text, userId: id })
-      })
-      console.log(reply)
-      console.log("success")
-      window.location.reload();
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  // code for post reply to message post
+  // const onReply = async () => {
+  //   try {
+  //     let response = await fetch(`/api/comment/${reply.messageId}`, {
+  //       method: "POST",
+  //       headers: {"Content-Type": "application/json"},
+  //       body: JSON.stringify({text: reply.text, userId: id })
+  //     })
+  //     console.log(reply)
+  //     console.log("success")
+  //     window.location.reload();
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
 
-  const fetchCurrentUser = async () => {
-    try {
-      const response = await fetch("/api/user");
-      const data = await response.json();
-      setCurrentUser(data.user);
-    } catch (error) {
-      console.error("Error fetching user:", error);
-    }
-  };
+  // const fetchCurrentUser = async () => {
+  //   try {
+  //     const response = await fetch("/api/user");
+  //     const data = await response.json();
+  //     setCurrentUser(data.user);
+  //   } catch (error) {
+  //     console.error("Error fetching user:", error);
+  //   }
+  // };
 
   useEffect(() => {
     fetchCurrentUser();
-    searchForum();
+    searchMessage();
   }, []);
 
 
-  // delete route for users forum posts
+  // delete route for users message posts
   const onDelete = async (event) => {
     try {
-      const response = await fetch(`/api/forum/${event.target.id}`, {
+      const response = await fetch(`/api/message/${event.target.id}`, {
         method: "DELETE",
       });
       console.log(response)
@@ -142,32 +143,32 @@ export default function Messages () {
     }
   }
 
-  const onDeleteComment = async (commentId) => {
-    if (commentId) {
-      try {
-        const response = await fetch(`/api/comment/${commentId}`, {
-          method: "DELETE",
-        });
+  // const onDeleteComment = async (commentId) => {
+  //   if (commentId) {
+  //     try {
+  //       const response = await fetch(`/api/comment/${commentId}`, {
+  //         method: "DELETE",
+  //       });
   
-        if (response.status === 200) {
-          const data = await response.json();
-          setCurrentUser(data.user);
-          window.location.reload();
-        } else {
-          console.error("Error deleting comment:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error deleting comment:", error);
-      }
-    }
-  };
+  //       if (response.status === 200) {
+  //         const data = await response.json();
+  //         setCurrentUser(data.user);
+  //         window.location.reload();
+  //       } else {
+  //         console.error("Error deleting comment:", response.statusText);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error deleting comment:", error);
+  //     }
+  //   }
+  // };
 
   if( !okToRender ) return <p>Loading...</p>
 
   return (
-    <div className="forumcontainer">
+    <div className="messagecontainer">
     <>
-        <Grid className="forum-content"
+        <Grid className="message-content"
         minHeight='300px'
         templateRows='repeat(1, 1fr)'
         templateColumns='repeat(5, 1fr)'
@@ -184,7 +185,7 @@ export default function Messages () {
                 <ModalHeader>New Message Post</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
-                  <FormControl controlId='forumTitle'>
+                  <FormControl controlId='messageTitle'>
                     <FormLabel>Message Post Title:</FormLabel>
                     <Input type='text' value={form.title} onChange={handleInputChange} name="title" />
                   </FormControl>
@@ -210,7 +211,7 @@ export default function Messages () {
             </Modal>
             <p></p>
             <div>
-              {forumPosts.map((index) => (
+              {messagePosts.map((index) => (
                 <div className="myposts" key={index.title}>
                     <Text isTruncated maxW="16ch" flex="1" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis">
                       "{index.title}"
@@ -241,17 +242,17 @@ export default function Messages () {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <AccordionPanel className="forum-panel" pb={4}>
+              <AccordionPanel className="message-panel" pb={4}>
                 <Box maxH="400px" overflowY="auto" border="1px solid lightgrey" borderRadius="8px">
-                  <div className="forum-img">
+                  <div className="message-img">
                     <img src={`${data.image}`} alt="image of plants" width="500" height="300"></img>
                   </div>
-                  <div className="forum-cnt">
+                  <div className="message-cnt">
                     {`${data.content}`}
                   </div>
                 </Box>
                 <div className="replybox">
-                <div className="forum-reply">
+                <div className="message-reply">
                   <p>Replies:</p>
                   <Button colorScheme='blue' onClick={onReplyOpen}>Add Reply</Button>
                 </div>

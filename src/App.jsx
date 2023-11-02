@@ -8,6 +8,7 @@ import Home from "./components/pages/Home"
 import SchoolPics from "./components/pages/SchoolPics"
 import SeniorPics from "./components/pages/SeniorPics"
 import Favorites from "./components/pages/Favorites"
+import Messages from "./components/pages/Messages"
 import {ChakraProvider} from "@chakra-ui/react"
 
 function App() {
