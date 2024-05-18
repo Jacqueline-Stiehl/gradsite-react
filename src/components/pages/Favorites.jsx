@@ -1,3 +1,5 @@
+// import React from 'react';
+// import "../../src/App.css"
 import {
     Grid,
     Card,
@@ -7,7 +9,7 @@ import {
     Stack,
     Text,
   } from "@chakra-ui/react";
-  import picGr2 from "../assets/images/Danika-first-day-of-2nd-grade.jpg"
+  import picGr2 from "../../assets/images/favpics/Danika-first-day-of-2nd-grade.jpg"
 
 export default function SchoolPics() {
 
