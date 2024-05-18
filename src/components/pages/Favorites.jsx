@@ -7,6 +7,7 @@ import {
     Stack,
     Text,
   } from "@chakra-ui/react";
+  import picGr2 from "../assets/images/Danika-first-day-of-2nd-grade.jpg"
 
 export default function SchoolPics() {
 
@@ -38,7 +39,7 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of 1st-grade.jpg"
+    src="../../src/assets/images/favpics/Danika-first-day-of 1st-grade.jpg"
       alt='Danika in 1st grade'
       borderRadius='lg'
     />
@@ -57,7 +58,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-2nd-grade.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-2nd-grade.jpg"
+    src={picGr2}
       alt='Danika in 2nd grade'
       borderRadius='lg'
     />
