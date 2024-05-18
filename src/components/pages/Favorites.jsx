@@ -18,7 +18,7 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-Kindergarten.jpg"
+    src="../../src/assets/images/favpics/Danika-first-day-of-Kindergarten.jpg"
       alt='Danika in kindergarten'
       borderRadius='lg'
       minHeight="610px"
