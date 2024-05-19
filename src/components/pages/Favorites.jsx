@@ -94,7 +94,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-3rd-grade.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-3rd-grade.jpg"
+    src={picGr3}
       alt='Danika in 3rd grade'
       borderRadius='lg'
     />
@@ -113,7 +114,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-4th-grade.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-4th-grade.jpg"
+    src={picGr4}
       alt='Danika in 4th grade'
       borderRadius='lg'
     />
@@ -132,7 +134,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-5th-grade.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-5th-grade.jpg"
+    src={picGr5}
       alt='Danika in 5th grade'
       borderRadius='lg'
       minHeight="615px"
@@ -152,7 +155,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-6th-grade-cropped.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-6th-grade-cropped.jpg"
+    src={picGr6}
       alt='Danika in 6th grade'
       borderRadius='lg'
       minHeight="615px"
@@ -171,7 +175,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-7th-grade.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-7th-grade.jpg"
+    src={picGr7}
       alt='Danika in 7th grade'
       borderRadius='lg'
       minHeight="615px"
@@ -191,7 +196,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-8th-grade.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-8th-grade.jpg"
+    src={picGr8}
       alt='Danika in 8th grade'
       borderRadius='lg'
     />
@@ -210,7 +216,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-9th-grade.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-9th-grade.jpg"
+    src={picGr9}
       alt='Danika in 9th grade'
       borderRadius='lg'
     />
@@ -229,7 +236,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-10th-grade.jpg"
+    // src="../src/assets/images/favpics/Danika-first-day-of-10th-grade.jpg"
+    src={picGr10}
       alt='Danika in 10th grade'
       borderRadius='lg'
     />
@@ -248,7 +256,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-11th-grade.png"
+    // src="../src/assets/images/favpics/Danika-first-day-of-11th-grade.png"
+    src={picGr11}
       alt='Danika in 11th grade'
       borderRadius='lg'
     />
@@ -267,7 +276,8 @@ export default function SchoolPics() {
 <Card maxW='md'>
   <CardBody>
     <Image
-    src="../src/assets/images/favpics/Danika-first-day-of-12th-grade.png"
+    // src="../src/assets/images/favpics/Danika-first-day-of-12th-grade.png"
+    src={picGr12}
       alt='Danika in 12th grade'
       borderRadius='lg'
     />
