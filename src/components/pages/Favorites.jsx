@@ -9,19 +9,19 @@ import {
     Stack,
     Text,
   } from "@chakra-ui/react";
- import picK from "../../assets/images/favpics/Danika-first-day-of-Kindergarten.jpg"
- import picGr1 from "../../assets/images/favpics/Danika-first-day-of 1st-grade.jpg"
- import picGr2 from "../../assets/images/favpics/Danika-first-day-of-2nd-grade.jpg"
- import picGr3 from "../../assets/images/favpics/Danika-first-day-of-3rd-grade.jpg"
- import picGr4 from "../../assets/images/favpics/Danika-first-day-of-4th-grade.jpg"
- import picGr5 from "../../assets/images/favpics/Danika-first-day-of-5th-grade.jpg"
- import picGr6 from "../../assets/images/favpics/Danika-first-day-of-6th-grade-cropped.jpg"
- import picGr7 from "../../assets/images/favpics/Danika-first-day-of-7th-grade.jpg"
- import picGr8 from "../../assets/images/favpics/Danika-first-day-of-8th-grade.jpg"
- import picGr9 from "../../assets/images/favpics/Danika-first-day-of-9th-grade.jpg"
- import picGr10 from "../../assets/images/favpics/Danika-first-day-of-10th-grade.jpg"
- import picGr11 from "../../assets/images/favpics/Danika-first-day-of-11th-grade.png"
- import picGr12 from "../../assets/images/favpics/Danika-first-day-of-12th-grade.png"
+ import picK from "../../assets/images/favpics/Danika-first-day-of-Kindergarten.jpg";
+ import picGr1 from "../../assets/images/favpics/Danika-first-day-of 1st-grade.jpg";
+ import picGr2 from "../../assets/images/favpics/Danika-first-day-of-2nd-grade.jpg";
+ import picGr3 from "../../assets/images/favpics/Danika-first-day-of-3rd-grade.jpg";
+ import picGr4 from "../../assets/images/favpics/Danika-first-day-of-4th-grade.jpg";
+ import picGr5 from "../../assets/images/favpics/Danika-first-day-of-5th-grade.jpg";
+ import picGr6 from "../../assets/images/favpics/Danika-first-day-of-6th-grade-cropped.jpg";
+ import picGr7 from "../../assets/images/favpics/Danika-first-day-of-7th-grade.jpg";
+ import picGr8 from "../../assets/images/favpics/Danika-first-day-of-8th-grade.jpg";
+ import picGr9 from "../../assets/images/favpics/Danika-first-day-of-9th-grade.jpg";
+ import picGr10 from "../../assets/images/favpics/Danika-first-day-of-10th-grade.jpg";
+ import picGr11 from "../../assets/images/favpics/Danika-first-day-of-11th-grade.png";
+ import picGr12 from "../../assets/images/favpics/Danika-first-day-of-12th-grade.png";
 
 export default function SchoolPics() {
 
